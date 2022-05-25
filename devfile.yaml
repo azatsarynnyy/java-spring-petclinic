@@ -19,7 +19,7 @@ components:
 commands:
   - id: build
     exec:
-      component: dev
+      component: tools
       workingDir: ${PROJECTS_ROOT}/che-code
       commandLine: |
         yarn watch
