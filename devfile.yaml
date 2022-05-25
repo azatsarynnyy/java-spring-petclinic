@@ -2,14 +2,14 @@ schemaVersion: 2.1.0
 metadata:
   name: che-code
 components:
-  - name: dev
+  - name: tools
     container:
       image: quay.io/che-incubator/che-code-dev:insiders
       memoryLimit: 7Gi
       cpuLimit: 3500m
       endpoints:
         - exposure: public
-          name: tools
+          name: dev
           secure: true
           protocol: http
           targetPort: 8000
