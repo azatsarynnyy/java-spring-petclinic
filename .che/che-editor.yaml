@@ -31,7 +31,6 @@ inline:
               urlRewriteSupported: true
             targetPort: 3100
             exposure: public
-            path: '?tkn=eclipse-che'
             secure: false
             protocol: https
           - name: code-redirect-1
@@ -62,7 +61,7 @@ inline:
       volume: {}
     - name: che-code-injector
       container:
-        image: quay.io/che-incubator-pull-requests/che-code:pr-63-amd64
+        image: quay.io/che-incubator-pull-requests/che-code:pr-65-amd64
         command: ["/entrypoint-init-container.sh"]
         volumeMounts:
           - name: checode
