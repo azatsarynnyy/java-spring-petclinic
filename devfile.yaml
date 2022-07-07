@@ -5,7 +5,7 @@ components:
 
   - name: tools
     container:
-      image: quay.io/mloriedo/universal-developer-image:ubi9-test
+      image: quay.io/devfile/universal-developer-image:ubi8-0e189d9
       memoryLimit: 3Gi
       endpoints:
         - exposure: none
