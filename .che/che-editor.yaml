@@ -12,7 +12,7 @@ inline:
   components:
     - name: theia-ide
       container:
-        image: 'quay.io/eclipse/che-theia:next'
+        image: 'quay.io/azatsary/che-theia:filter'
         env:
           - name: THEIA_PLUGINS
             value: 'local-dir:///plugins'
@@ -108,7 +108,7 @@ inline:
       volume: {}
     - name: che-machine-exec
       container:
-        image: 'quay.io/eclipse/che-machine-exec:next'
+        image: 'quay.io/azatsary/che-theia-endpoint-runtime-binary:filter'
         memoryLimit: 128Mi
         memoryRequest: 32Mi
         cpuLimit: 500m
