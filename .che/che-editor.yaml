@@ -61,7 +61,7 @@ inline:
       volume: {}
     - name: che-code-injector
       container:
-        image: quay.io/che-incubator/che-code:insiders
+        image: quay.io/che-incubator-pull-requests/che-code:pr-88-amd64
         command: ["/entrypoint-init-container.sh"]
         volumeMounts:
           - name: checode
