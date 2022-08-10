@@ -5,7 +5,7 @@ components:
 
   - name: tools
     container:
-      image: quay.io/mloriedo/universal-developer-image:ubi9-test
+      image: quay.io/azatsary/che-code:ubi8-pwrsh
       memoryLimit: 3Gi
       endpoints:
         - exposure: none
