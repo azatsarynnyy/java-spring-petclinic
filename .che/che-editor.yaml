@@ -29,7 +29,7 @@ inline:
               cookiesAuthEnabled: true
               discoverable: false
               urlRewriteSupported: true
-            path: '?folder=/projects
+            path: '?folder=/projects'
             targetPort: 3100
             exposure: public
             secure: false
