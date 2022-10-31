@@ -12,7 +12,7 @@ inline:
   components:
     - name: che-idea-runtime-description
       container:
-        image: 'quay.io/devfile/universal-developer-image:ubi8-9436df2'
+        image: 'quay.io/devfile/universal-developer-image:ubi8-latest'
         command:
           - /projector/entrypoint-volume.sh
         env:
