@@ -5,6 +5,7 @@
     "redhat.java",
     "dbaeumer.vscode-eslint",
     "redhat.vscode-yaml",
-    "EditorConfig.EditorConfig"
+    "EditorConfig.EditorConfig",
+    "streetsidesoftware.code-spell-checker"
   ]
 }
