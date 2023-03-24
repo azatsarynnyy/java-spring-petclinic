@@ -3,18 +3,23 @@ inline:
   metadata:
     name: che-code
   commands:
-    - id: init-container-command
-      apply:
-        component: che-code-injector
-  events:
-    preStart:
-      - init-container-command
+      - id: init-container-command
+        apply:
+          component: che-code-injector
+      - id: init-che-code-command
+        exec:
+          component: che-code-runtime-description
+          commandLine: 'nohup /checode/entrypoint-volume.sh > /checode/entrypoint-logs.txt
+            2>&1 &'
+    events:
+      preStart:
+        - init-container-command
+      postStart:
+        - init-che-code-command
   components:
     - name: che-code-runtime-description
       container:
         image: quay.io/devfile/universal-developer-image:ubi8-770ea4a
-        command:
-          - /checode/entrypoint-volume.sh
         volumeMounts:
           - name: checode
             path: /checode
