@@ -19,7 +19,7 @@ inline:
   components:
     - name: che-code-runtime-description
       container:
-        image: quay.io/devfile/universal-developer-image:ubi8-770ea4a
+        image: quay.io/devfile/universal-developer-image:ubi8-latest
         volumeMounts:
           - name: checode
             path: /checode
