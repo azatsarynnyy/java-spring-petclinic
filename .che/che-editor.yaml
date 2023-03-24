@@ -11,11 +11,11 @@ inline:
         component: che-code-runtime-description
         commandLine: 'nohup /checode/entrypoint-volume.sh > /checode/entrypoint-logs.txt
           2>&1 &'
-    events:
-      preStart:
-        - init-container-command
-      postStart:
-        - init-che-code-command
+  events:
+    preStart:
+      - init-container-command
+    postStart:
+      - init-che-code-command
   components:
     - name: che-code-runtime-description
       container:
