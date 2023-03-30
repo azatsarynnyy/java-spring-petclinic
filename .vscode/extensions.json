@@ -3,6 +3,6 @@
   // for the documentation about the extensions.json format
   "recommendations": [
     "redhat.java",
-    "cnshenj/vscode-task-manager"
+    "cnshenj.vscode-task-manager"
   ]
 }
