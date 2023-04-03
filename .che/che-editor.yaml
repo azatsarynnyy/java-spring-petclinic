@@ -2,18 +2,6 @@ inline:
   schemaVersion: 2.1.0
   metadata:
     name: che-code
-    displayName: VS Code - Open Source
-    description: Microsoft Visual Studio Code - Open Source IDE for Eclipse Che
-      - Insiders build
-    icon: https://raw.githubusercontent.com/che-incubator/che-code/main/code/resources/server/code-512.png?sanitize=true
-    attributes:
-      publisher: che-incubator
-      version: insiders
-      title: Microsoft Visual Studio Code - Open Source IDE for Eclipse Che - Insiders
-        build
-      repository: https://github.com/che-incubator/che-code
-      firstPublicationDate: '2021-10-31'
-      skipMetaYaml: true
   commands:
     - id: init-container-command
       apply:
