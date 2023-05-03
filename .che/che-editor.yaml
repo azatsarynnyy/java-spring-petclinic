@@ -18,7 +18,7 @@ inline:
   components:
     - name: che-code-injector
       container:
-        image: 'quay.io/azatsary/che-code:no-cdn'
+        image: 'quay.io/che-incubator-pull-requests/che-code:pr-221-amd64'
         command: ["/entrypoint-init-container.sh"]
         volumeMounts:
           - name: checode
