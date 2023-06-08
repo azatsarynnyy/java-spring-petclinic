@@ -52,6 +52,12 @@ components:
     volume:
       size: 256Mi
 
+  - name: tcpdump
+    container:
+      image: corfr/tcpdump
+      command:
+        - /bin/sleep
+        - infinity
 commands:
   - id: prepare-database
     exec:
