@@ -21,7 +21,7 @@ inline:
         image: 'quay.io/azatsary/idea:latest'
         command: ["/entrypoint-init-container.sh"]
         volumeMounts:
-          - name: checode
+          - name: idea-server
             path: /idea-server
         memoryLimit: 256Mi
         memoryRequest: 32Mi
@@ -35,7 +35,7 @@ inline:
         cpuLimit: 500m
         cpuRequest: 30m
         volumeMounts:
-          - name: checode
+          - name: idea-server
             path: /idea-server
         endpoints:
           - name: che-code
@@ -73,5 +73,5 @@ inline:
         app.kubernetes.io/component: che-code-runtime
         app.kubernetes.io/part-of: che-code.eclipse.org
         controller.devfile.io/container-contribution: true
-    - name: checode
+    - name: idea-server
       volume: {}
