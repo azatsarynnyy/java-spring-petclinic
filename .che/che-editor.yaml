@@ -22,7 +22,7 @@ inline:
         command: ["/entrypoint-init-container.sh"]
         volumeMounts:
           - name: checode
-            path: /checode
+            path: /idea-server
         memoryLimit: 256Mi
         memoryRequest: 32Mi
         cpuLimit: 500m
@@ -36,7 +36,7 @@ inline:
         cpuRequest: 30m
         volumeMounts:
           - name: checode
-            path: /checode
+            path: /idea-server
         endpoints:
           - name: che-code
             attributes:
