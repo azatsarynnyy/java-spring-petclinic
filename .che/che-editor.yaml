@@ -48,27 +48,6 @@ inline:
             exposure: public
             secure: true
             protocol: http
-          - name: code-redirect-1
-            targetPort: 13131
-            exposure: public
-            protocol: http
-            attributes:
-              discoverable: false
-              urlRewriteSupported: false
-          - name: code-redirect-2
-            targetPort: 13132
-            exposure: public
-            protocol: http
-            attributes:
-              discoverable: false
-              urlRewriteSupported: false
-          - name: code-redirect-3
-            targetPort: 13133
-            exposure: public
-            protocol: http
-            attributes:
-              discoverable: false
-              urlRewriteSupported: false
       attributes:
         app.kubernetes.io/component: idea-server-runtime
         app.kubernetes.io/part-of: idea-server.eclipse.org
