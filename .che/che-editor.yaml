@@ -38,13 +38,13 @@ inline:
           - name: idea-server
             path: /idea-server
         endpoints:
-          - name: che-code
+          - name: idea-server
             attributes:
               type: main
               cookiesAuthEnabled: true
               discoverable: false
               urlRewriteSupported: true
-            targetPort: 3100
+            targetPort: 5990
             exposure: public
             secure: true
             protocol: http
