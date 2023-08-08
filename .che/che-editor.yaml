@@ -41,13 +41,13 @@ inline:
           - name: idea-server
             attributes:
               type: main
-              cookiesAuthEnabled: false
+              # cookiesAuthEnabled: true
               discoverable: false
               urlRewriteSupported: true
             targetPort: 5990
             exposure: public
-            secure: false
-            protocol: http
+            # secure: true
+            protocol: tcp
       attributes:
         app.kubernetes.io/component: idea-server-runtime
         app.kubernetes.io/part-of: idea-server.eclipse.org
