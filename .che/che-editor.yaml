@@ -1,22 +1,22 @@
 inline:
   schemaVersion: 2.1.0
   metadata:
-    name: che-code
+    name: idea-server
   commands:
-    - id: init-container-command
+    - id: init-container
       apply:
-        component: che-code-injector
-    - id: init-che-code-command
+        component: idea-server-injector
+    - id: start-idea-server
       exec:
-        component: che-code-runtime-description
+        component: idea-server-runtime
         commandLine: 'nohup /idea-server/entrypoint-volume.sh > /idea-server/entrypoint-logs.txt 2>&1 &'
   events:
     preStart:
-      - init-container-command
+      - init-container
     postStart:
-      - init-che-code-command
+      - start-idea-server
   components:
-    - name: che-code-injector
+    - name: idea-server-injector
       container:
         image: 'quay.io/azatsary/idea:latest'
         command: ["/entrypoint-init-container.sh"]
@@ -27,7 +27,7 @@ inline:
         memoryRequest: 32Mi
         cpuLimit: 500m
         cpuRequest: 30m
-    - name: che-code-runtime-description
+    - name: idea-server-runtime
       container:
         image: 'quay.io/devfile/universal-developer-image:ubi8-latest'
         memoryLimit: 1024Mi
@@ -70,8 +70,8 @@ inline:
               discoverable: false
               urlRewriteSupported: false
       attributes:
-        app.kubernetes.io/component: che-code-runtime
-        app.kubernetes.io/part-of: che-code.eclipse.org
+        app.kubernetes.io/component: idea-server-runtime
+        app.kubernetes.io/part-of: idea-server.eclipse.org
         controller.devfile.io/container-contribution: true
     - name: idea-server
       volume: {}
