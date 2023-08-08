@@ -46,7 +46,8 @@ inline:
               urlRewriteSupported: true
             targetPort: 5990
             exposure: public
-            protocol: tcp
+            secure: false
+            protocol: http
       attributes:
         app.kubernetes.io/component: idea-server-runtime
         app.kubernetes.io/part-of: idea-server.eclipse.org
