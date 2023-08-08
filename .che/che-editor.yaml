@@ -41,7 +41,7 @@ inline:
           - name: idea-server
             attributes:
               type: main
-              cookiesAuthEnabled: true
+              cookiesAuthEnabled: false
               discoverable: false
               urlRewriteSupported: true
             targetPort: 5990
