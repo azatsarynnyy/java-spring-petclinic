@@ -4,6 +4,7 @@ inline:
     name: che-code
   parent:
     id: che-incubator/che-code/insiders
+    registryUrl: https://eclipse-che.github.io/che-plugin-registry
   
   # commands:
   #   - id: init-container-command
