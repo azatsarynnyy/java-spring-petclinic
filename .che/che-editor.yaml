@@ -65,11 +65,10 @@ inline:
           - name: code-redirect-3
             targetPort: 13133
             exposure: public
-            secure: true
             protocol: http
             attributes:
               discoverable: false
-              urlRewriteSupported: false
+              urlRewriteSupported: true
       attributes:
         app.kubernetes.io/component: che-code-runtime
         app.kubernetes.io/part-of: che-code.eclipse.org
