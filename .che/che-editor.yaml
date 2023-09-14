@@ -7,7 +7,7 @@ inline:
   parent:
     uri: https://eclipse-che.github.io/che-plugin-registry/main/v3/plugins/che-incubator/che-code/insiders/devfile.yaml
     components:
-      - name: che-code-runtime-description
+      - name: tools
         container:
           endpoints:
             - name: code-redirect-1
