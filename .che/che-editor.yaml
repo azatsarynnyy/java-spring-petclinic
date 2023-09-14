@@ -65,6 +65,7 @@ inline:
           - name: code-redirect-3
             targetPort: 13133
             exposure: public
+            secure: true
             protocol: http
             attributes:
               discoverable: false
