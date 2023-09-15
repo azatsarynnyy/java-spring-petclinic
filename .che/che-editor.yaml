@@ -1,17 +1,9 @@
-inline:
-  schemaVersion: 2.2.0
-  metadata:
-    name: che-code
-  variables:
-    pr: 248
-  parent:
-    uri: https://eclipse-che.github.io/che-plugin-registry/main/v3/plugins/che-incubator/che-code/insiders/devfile.yaml
-    components:
-      - name: tools
-        container:
-          endpoints:
-            - name: code-redirect-1
-              secure: true
+parent:
+  uri: https://eclipse-che.github.io/che-plugin-registry/main/v3/plugins/che-incubator/che-code/insiders/devfile.yaml
+  components:
+    - name: che-code-injector
+      container:
+        image: 'quay.io/che-incubator-pull-requests/che-code:pr-248-amd64'
   
   # commands:
   #   - id: init-container-command
