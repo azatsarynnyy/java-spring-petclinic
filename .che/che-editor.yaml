@@ -58,7 +58,7 @@ inline:
           - name: code-redirect-2
             targetPort: 13132
             exposure: public
-            protocol: http
+            protocol: https
             attributes:
               discoverable: false
               urlRewriteSupported: false
