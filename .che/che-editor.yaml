@@ -1,5 +1,8 @@
-parent:
-  uri: https://eclipse-che.github.io/che-plugin-registry/main/v3/plugins/che-incubator/che-code/insiders/devfile.yaml
+id: che-incubator/che-code/insiders
+override:
+
+# parent:
+#   uri: https://eclipse-che.github.io/che-plugin-registry/main/v3/plugins/che-incubator/che-code/insiders/devfile.yaml
   components:
     - name: che-code-injector
       container:
