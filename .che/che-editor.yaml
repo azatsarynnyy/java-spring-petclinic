@@ -18,7 +18,7 @@ inline:
   components:
     - name: idea-server-injector
       container:
-        image: 'quay.io/azatsary/idea:latest'
+        image: 'quay.io/azatsary/idea:che'
         command: ["/entrypoint-init-container.sh"]
         volumeMounts:
           - name: idea-server
