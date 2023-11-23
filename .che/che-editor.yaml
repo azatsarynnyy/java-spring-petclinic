@@ -19,7 +19,7 @@ inline:
     - name: idea-server-injector
       container:
         image: 'quay.io/azatsary/idea:che'
-        command: ["/entrypoint-init-container.sh"]
+        # command: ["/entrypoint-init-container.sh"]
         volumeMounts:
           - name: idea-server
             path: /idea-server
