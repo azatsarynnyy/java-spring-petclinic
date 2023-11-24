@@ -18,8 +18,8 @@ inline:
   components:
     - name: idea-server-injector
       container:
-        image: 'quay.io/azatsary/idea:che'
-        # command: ["/entrypoint-init-container.sh"]
+        image: 'quay.io/azatsary/idea:latest'
+        command: ["/entrypoint-init-container.sh"]
         volumeMounts:
           - name: idea-server
             path: /idea-server
@@ -41,13 +41,13 @@ inline:
           - name: idea-server
             attributes:
               type: main
-              cookiesAuthEnabled: true
+              # cookiesAuthEnabled: true
               discoverable: false
               urlRewriteSupported: true
-            targetPort: 3000
+            targetPort: 5990
             exposure: public
-            secure: true
-            protocol: http
+            # secure: true
+            protocol: tcp
       attributes:
         app.kubernetes.io/component: idea-server-runtime
         app.kubernetes.io/part-of: idea-server.eclipse.org
