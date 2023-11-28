@@ -30,10 +30,10 @@ inline:
     - name: idea-server-runtime
       container:
         image: 'quay.io/devfile/universal-developer-image:ubi8-latest'
-        memoryLimit: 1024Mi
-        memoryRequest: 256Mi
-        cpuLimit: 500m
-        cpuRequest: 30m
+        memoryLimit: 6144Mi
+        memoryRequest: 2048Mi
+        cpuLimit: 2000m
+        cpuRequest: 1500m
         volumeMounts:
           - name: idea-server
             path: /idea-server
